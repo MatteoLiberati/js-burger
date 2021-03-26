@@ -16,7 +16,8 @@ var discount = document.getElementById("coupon");
 var button = document.getElementById("button");
 var priceDisplay = document.getElementById("price");
 
-
+// CONSTANT VARIABLES
+var codeDiscount = ["burgerspecial42","robertaèbella","burgerobicbuono"];
 
 // INTERAZIONE CON CLICK BUTTON
 button.addEventListener("click", function() {
@@ -35,9 +36,16 @@ button.addEventListener("click", function() {
                 console.log("Selezionato " +ingredient.id + " di valore " + ingredient.value);
                 price += parseInt(ingredient.value);
             }
-            // STAMPA A VIDEO DEL PREZZO AGGIORNATO
-            priceDisplay.innerHTML = price.toFixed(2);
         }
+        
+        // CONTROLLO SCONTO DA APPLICARE
+        if(codeDiscount.includes(discount.value)){
+            console.log("Sconto applicato del 20%");
+            price -= price * .2;
+            }
+        
+        // STAMPA A VIDEO DEL PREZZO AGGIORNATO
+        priceDisplay.innerHTML = price.toFixed(2);
 
     }
 
