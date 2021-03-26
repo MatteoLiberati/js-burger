@@ -12,3 +12,15 @@ var Ingredients = document.getElementsByClassName("ingredient-checkbox");
 var add = document.getElementsByClassName("ingredient-add");
 var discount = document.getElementById("coupon");
 var button = document.getElementById("button");
+
+
+// INTERAZIONE CON CLICK BUTTON
+button.addEventListener("click", function() {
+
+    // NOME BURGER PERSONALIZZATO OBBLIGATORIO
+    if(nameBurger.value === ""){
+        alert("Attenzione, non hai inserito il nome del tuo Burger!");
+    }else{
+        console.log("nomepieno");
+    }
+})
