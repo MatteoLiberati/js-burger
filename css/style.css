@@ -11,6 +11,10 @@ body {
 }
 
 /* mix */
+.cursor-pointer{
+  cursor:pointer;
+}
+
 .btn {
   padding: 16px 32px;
   border: none;
